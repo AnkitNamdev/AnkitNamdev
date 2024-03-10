@@ -1,1 +1,1 @@
-Ecomerce website use for django
+Ecomerce website/Django
