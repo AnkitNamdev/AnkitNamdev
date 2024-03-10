@@ -1,0 +1,25 @@
+{% extends 'product/base.html' %}
+{% block content %}
+
+{% if msg %}
+
+
+{{msg}}
+
+{% endif %}
+
+<div>
+    <img src="{{i.image.url}}" alt="">
+    {{i.name}}
+
+    <div>MRP:{{i.price}}</div>
+    <div>Descraption:{{i.desc}} </div>
+    <div>AVAILABILATY:{{available}}</div>
+
+<div>You Purchased: {{q }}</div>
+<div>Total Bill: {{total }}</div>
+</div>
+<br><br><br>
+
+<a href="{% url 'billing' %}">Billing Address</a>
+{% endblock content %}

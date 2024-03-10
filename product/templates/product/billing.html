@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Billing Address</h2>
+
+<form action="{% url 'bill'%}" method="POST">
+  {% csrf_token %}
+
+  <label for="fname">Name:</label><br>
+  <input type="text" id="fname" name="cn" ><br>
+
+  <label for="Aname">Address</label><br>
+  <textarea name="ca" id="" cols="30" rows="10"></textarea><br>
+
+  <label for="Pname">Pin_Code</label><br>
+  <input type="text" id="Pname" name="cp"><br>
+
+  <label for="Mname">Mobile_No</label><br>
+  <input type="text" id="Mname" name="cm"><br>  
+
+  <input type="submit" value="Submit" >
+</form> 
+
+<!-- <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p> -->
+
+</body>
+</html>
+

@@ -1,0 +1,21 @@
+{% extends 'product/base.html' %}
+{% block content %}
+{% for i in data %}
+<img src="{{ i.image.url }}" alt="">
+{{i.name}}
+
+
+
+<form action="{% url 'buy' i.id i.price i.available %}" method="post">
+    {% csrf_token %}
+    <label for="quantity">Quantity</label>
+    <input type="text" id="quantity" name="quan">
+    <input type="submit" value="Buy NOW">
+</form>
+<div>MRP:{{i.price}}</div>
+<div>Description: {{i.desc}}</div>
+<div>Availabilaty: {{i.available}}</div>
+
+{% endfor %}
+
+{% endblock content %}
